@@ -199,7 +199,7 @@ class CountdownTimerDemo extends StatelessWidget {
                             onPressed: () {
                               var startState = context.read<TimerModel>();
 
-                              startState.startTimer();
+                              startState.stopTimer();
                             },
                             child: Text(
                               'Stop',
@@ -232,7 +232,7 @@ class CountdownTimerDemo extends StatelessWidget {
                             onPressed: () {
                               var startState = context.read<TimerModel>();
 
-                              startState.startTimer();
+                              startState.resetTimer();
                             },
                             child: Text(
                               'Reset',
