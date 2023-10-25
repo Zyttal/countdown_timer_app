@@ -1,4 +1,4 @@
-import 'package:countdown_timer_app/homepage.dart';
+import 'package:countdown_timer_app/pages/homepage.dart';
 import 'package:countdown_timer_app/timer_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
