@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class CountdownTimerDemo extends StatelessWidget {
+  const CountdownTimerDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<TimerModel>(
@@ -12,7 +14,7 @@ class CountdownTimerDemo extends StatelessWidget {
         body: Stack(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
                           'https://res.cloudinary.com/dbwwffypj/image/upload/v1697903859/wp4788644_iznjdm.jpg'),
@@ -27,14 +29,14 @@ class CountdownTimerDemo extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
+                            SizedBox(
                               width: 149,
                               height: 50,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor:
-                                        Color.fromARGB(140, 30, 30, 30),
-                                    maximumSize: Size(149, 50),
+                                        const Color.fromARGB(140, 30, 30, 30),
+                                    maximumSize: const Size(149, 50),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(20)),
@@ -47,10 +49,11 @@ class CountdownTimerDemo extends StatelessWidget {
                                 child: Text(
                                   '25 : 5',
                                   style: GoogleFonts.roboto(
-                                      color: Color.fromARGB(255, 147, 246, 226),
+                                      color: const Color.fromARGB(
+                                          255, 147, 246, 226),
                                       fontSize: 25,
                                       shadows: [
-                                        Shadow(
+                                        const Shadow(
                                           color: Color.fromARGB(64, 0, 0, 0),
                                           offset: Offset(2,
                                               2), // Shadow offset (horizontal, vertical)
@@ -60,17 +63,17 @@ class CountdownTimerDemo extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 35,
                             ),
-                            Container(
+                            SizedBox(
                               width: 149,
                               height: 50,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor:
-                                        Color.fromARGB(140, 30, 30, 30),
-                                    maximumSize: Size(149, 50),
+                                        const Color.fromARGB(140, 30, 30, 30),
+                                    maximumSize: const Size(149, 50),
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(20)),
@@ -84,10 +87,11 @@ class CountdownTimerDemo extends StatelessWidget {
                                 child: Text(
                                   '50 : 10',
                                   style: GoogleFonts.roboto(
-                                      color: Color.fromARGB(255, 147, 246, 226),
+                                      color: const Color.fromARGB(
+                                          255, 147, 246, 226),
                                       fontSize: 25,
                                       shadows: [
-                                        Shadow(
+                                        const Shadow(
                                           color: Color.fromARGB(64, 0, 0, 0),
                                           offset: Offset(2,
                                               2), // Shadow offset (horizontal, vertical)
@@ -99,7 +103,7 @@ class CountdownTimerDemo extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         ),
                         Row(
@@ -108,7 +112,7 @@ class CountdownTimerDemo extends StatelessWidget {
                             DisplayTimeCard(
                                 value: value.minutes,
                                 unitOfTimeLabel: 'Minutes'),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             DisplayTimeCard(
@@ -116,17 +120,17 @@ class CountdownTimerDemo extends StatelessWidget {
                                 unitOfTimeLabel: 'Minutes')
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
-                        Container(
+                        SizedBox(
                           width: 80,
                           height: 35,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
-                                    Color.fromARGB(140, 30, 30, 30),
-                                maximumSize: Size(149, 50),
+                                    const Color.fromARGB(140, 30, 30, 30),
+                                maximumSize: const Size(149, 50),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 elevation: 4),
@@ -138,10 +142,11 @@ class CountdownTimerDemo extends StatelessWidget {
                             child: Text(
                               'Skip',
                               style: GoogleFonts.roboto(
-                                  color: Color.fromARGB(255, 147, 246, 226),
+                                  color:
+                                      const Color.fromARGB(255, 147, 246, 226),
                                   fontSize: 20,
                                   shadows: [
-                                    Shadow(
+                                    const Shadow(
                                       color: Color.fromARGB(64, 0, 0, 0),
                                       offset: Offset(2,
                                           2), // Shadow offset (horizontal, vertical)
@@ -157,17 +162,17 @@ class CountdownTimerDemo extends StatelessWidget {
                           style: GoogleFonts.roboto(
                               fontSize: 36,
                               fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(140, 30, 30, 30)),
+                              color: const Color.fromARGB(140, 30, 30, 30)),
                         ),
                         const SizedBox(height: 50),
-                        Container(
+                        SizedBox(
                           width: 149,
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
-                                    Color.fromARGB(140, 30, 30, 30),
-                                maximumSize: Size(149, 50),
+                                    const Color.fromARGB(140, 30, 30, 30),
+                                maximumSize: const Size(149, 50),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 elevation: 4),
@@ -179,10 +184,11 @@ class CountdownTimerDemo extends StatelessWidget {
                             child: Text(
                               'Start',
                               style: GoogleFonts.roboto(
-                                  color: Color.fromARGB(255, 147, 246, 226),
+                                  color:
+                                      const Color.fromARGB(255, 147, 246, 226),
                                   fontSize: 25,
                                   shadows: [
-                                    Shadow(
+                                    const Shadow(
                                       color: Color.fromARGB(64, 0, 0, 0),
                                       offset: Offset(2,
                                           2), // Shadow offset (horizontal, vertical)
@@ -193,14 +199,14 @@ class CountdownTimerDemo extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 20),
-                        Container(
+                        SizedBox(
                           width: 149,
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
-                                    Color.fromARGB(140, 30, 30, 30),
-                                maximumSize: Size(149, 50),
+                                    const Color.fromARGB(140, 30, 30, 30),
+                                maximumSize: const Size(149, 50),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 elevation: 4),
@@ -212,10 +218,11 @@ class CountdownTimerDemo extends StatelessWidget {
                             child: Text(
                               'Stop',
                               style: GoogleFonts.roboto(
-                                  color: Color.fromARGB(255, 147, 246, 226),
+                                  color:
+                                      const Color.fromARGB(255, 147, 246, 226),
                                   fontSize: 25,
                                   shadows: [
-                                    Shadow(
+                                    const Shadow(
                                       color: Color.fromARGB(64, 0, 0, 0),
                                       offset: Offset(2,
                                           2), // Shadow offset (horizontal, vertical)
@@ -226,14 +233,14 @@ class CountdownTimerDemo extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 20),
-                        Container(
+                        SizedBox(
                           width: 149,
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
-                                    Color.fromARGB(140, 30, 30, 30),
-                                maximumSize: Size(149, 50),
+                                    const Color.fromARGB(140, 30, 30, 30),
+                                maximumSize: const Size(149, 50),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 elevation: 4),
@@ -245,10 +252,11 @@ class CountdownTimerDemo extends StatelessWidget {
                             child: Text(
                               'Reset',
                               style: GoogleFonts.roboto(
-                                  color: Color.fromARGB(255, 147, 246, 226),
+                                  color:
+                                      const Color.fromARGB(255, 147, 246, 226),
                                   fontSize: 25,
                                   shadows: [
-                                    Shadow(
+                                    const Shadow(
                                       color: Color.fromARGB(64, 0, 0, 0),
                                       offset: Offset(2,
                                           2), // Shadow offset (horizontal, vertical)
@@ -265,33 +273,35 @@ class CountdownTimerDemo extends StatelessWidget {
               ),
             ),
             Positioned(
+              left: 10,
+              bottom: 10,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Made\nby",
                     style: GoogleFonts.roboto(
-                        color: Color.fromARGB(255, 147, 246, 226)),
+                        color: const Color.fromARGB(255, 147, 246, 226)),
                   ),
                   Text(
                     "Zyttal.",
                     style: GoogleFonts.roboto(
-                        color: Color.fromARGB(255, 147, 246, 226),
+                        color: const Color.fromARGB(255, 147, 246, 226),
                         fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
-              left: 10,
-              bottom: 10,
             ),
             Positioned(
+              left: 10,
+              top: 10,
               child: Text(
                 "Pomodoro Timer",
                 style: GoogleFonts.roboto(
-                    color: Color.fromARGB(255, 147, 246, 226),
+                    color: const Color.fromARGB(255, 147, 246, 226),
                     fontSize: 20,
                     shadows: [
-                      Shadow(
+                      const Shadow(
                         color: Color.fromARGB(64, 0, 0, 0),
                         offset: Offset(
                             2, 2), // Shadow offset (horizontal, vertical)
@@ -299,8 +309,6 @@ class CountdownTimerDemo extends StatelessWidget {
                       )
                     ]),
               ),
-              left: 10,
-              top: 10,
             )
           ],
         ),

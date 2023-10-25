@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Countdown Timer Application',
-      home: CountdownTimerDemo(),
+      home: const CountdownTimerDemo(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(textTheme: GoogleFonts.robotoTextTheme()),
     );
