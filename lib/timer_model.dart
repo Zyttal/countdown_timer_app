@@ -19,7 +19,6 @@ class TimerModel extends ChangeNotifier {
   String get minutes => strDigits(selectedDuration.inMinutes.remainder(60));
   String get seconds => strDigits(selectedDuration.inSeconds.remainder(60));
 
-  // bool phase = true;
   String phaseText = "Work Period";
 
   void startTimer() {
@@ -71,6 +70,11 @@ class TimerModel extends ChangeNotifier {
     if (countdownTimer != null) {
       countdownTimer!.cancel();
     }
+    if (isWorkPhase) {
+      phaseText = "Rest Period";
+    } else {
+      phaseText = "Work Period";
+    }
     selectedDurationPair = option1;
     selectedDuration = option1.getWorkDuration();
     isWorkPhase = true; // Update the phase to work
@@ -80,6 +84,11 @@ class TimerModel extends ChangeNotifier {
   void option2Select() {
     if (countdownTimer != null) {
       countdownTimer!.cancel();
+    }
+    if (isWorkPhase) {
+      phaseText = "Rest Period";
+    } else {
+      phaseText = "Work Period";
     }
     selectedDurationPair = option2;
     selectedDuration = option2.getWorkDuration();

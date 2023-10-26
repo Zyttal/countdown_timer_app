@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DisplayTimeCard extends StatelessWidget {
-  DisplayTimeCard(
+  const DisplayTimeCard(
       {Key? key, required this.value, required this.unitOfTimeLabel});
-  String value;
-  String unitOfTimeLabel;
+  final String value;
+  final String unitOfTimeLabel;
   @override
   Widget build(BuildContext context) {
     return Container(
